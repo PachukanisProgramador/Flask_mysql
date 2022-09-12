@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<HTML lang="pt-BR">
+    <HEAD>
+        <meta charset="UTF-8"/>
+        <title>{{tituloIndex}}</title>
+    </HEAD>
+    <BODY style="color: white; background-color:blue">
+        <nav id="camposNav" style="text-align: center;">
+            <form action="/" method="POST">
+                <label id="labelNome" nome="labelNome">Nome:</label>
+                <input type="text" id="textNome" name="inputNome" placeholder="Insira um nome"><br>
+
+                <label id="labelTelefone" nome="labelTelefone">Telefone:</label>
+                <input type="text" id="textTelefone" name="inputTelefone" placeholder="Insira um telefone"><br>
+
+                <label id="labelEndereco" nome="labelEndereco">Endereço:</label>
+                <input type="text" id="textEndereco" name="inputEndereco" placeholder="Insira um endereço"><br>
+
+                <label id="labelDataNascimento" nome="labelDataNascimento">Data de Nascimento:</label><br>
+                <input type="date" id="textDataNascimento" name="inputDataNascimento" 
+                placeholder="Insira uma data de nascimento">
+                
+                <button type="submit">inserir</button>
+            </form>
+            <br><br><br>
+            <label id="resultadoInsercao" name="resultadoInsercao">{{resultado}}</label>
+            <br>
+            <nav id="navConsulta">
+                <form action="/consulta" method="POST">
+                    <label id="labelCodigo" name="labelCodigo">Código:</label>
+                    <input type="number" id="numberCodigo" name="inputCodigo"/>
+                    <button type="submit">consultar</button>
+                </form>
+                <br>
+                <textarea name="textAreaCodigo" id="textAreaCodigo" cols="30" rows="10">{{resultadoConsulta}}</textarea>
+            </nav>
+        </nav>
+    </BODY>
+</HTML>
